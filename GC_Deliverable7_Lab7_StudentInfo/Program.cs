@@ -13,7 +13,7 @@ namespace GC_Deliverable7_Lab7_StudentInfo
             //Build the database
             string[] arrNames     = { "Liam Boll", "Jacob Snover", "Jason Kubo", "Beni Rajanish", "Jordan Contreras", "Dave Ryda", "Evan Ricard", "Mike McCarthy", "Dave Schwartz", "Stephen Scobie", "Pierce Lauring", "Peter Guenther", "Z.Z. Zuzz" };
             string[] arrFoods     = { "hamburgers", "hot dogs", "hummus", "asparagus", "french fries", "sushi", "broccoli", "pumpkin pie", "pizza", "gnocchi", "sauerkraut", "tacos", "green eggs and ham" };
-            string[] arrHometowns = { "Grosse Pointe, MI", "Chicagoland, IL-IN", "Traverse City, MI", "Livonia, MI", "Ferndale, MI", "Detroit, MI", "Bay City, MI", "Detroit, MI", "West Bloomfield, MI", "Kalamazoo, MI", "Bloomfield Hills, MI", "Escanaba, MI", "Whoville" };
+            string[] arrHometowns = { "Grosse Pointe, MI", "Chicagoland, IL-IN", "Traverse City, MI", "Livonia, MI", "Ferndale, MI", "Detroit, MI", "Bay City, MI", "Detroit, MI", "West Bloomfield, MI", "Kalamazoo, MI", "Bloomfield Hills, MI", "Detroit, MI", "Whoville" };
 
             Console.WriteLine("/*************************/");
             Console.WriteLine("/* Student Database v1.0 */");
@@ -89,12 +89,12 @@ namespace GC_Deliverable7_Lab7_StudentInfo
         {
             int attempts = 0;
 
-            Console.Write("Please enter in a number (1 - 12) to learn more about that student: ");
+            Console.Write("Please enter in a number (1 - 13) to learn more about that student: ");
             bool valid = int.TryParse(Console.ReadLine(), out recNo);
 
             while (attempts < 4)
             {
-                if (!valid || recNo > arr.Length)
+                if (!valid || recNo > arr.Length || recNo < 1)
                 {
                     Console.WriteLine("That was not a valid entry. Please try again ({0} attempts left)", 4 - attempts);
                     Console.Write("Please enter in a student number (1 - 12): ");
